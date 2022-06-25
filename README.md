@@ -1,6 +1,22 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Structure
+- bin `command shell for execute test and run website`
+- mock-api `express server with mock-api`
+- public `public assets`
+- src `configured source code`
+
+### SRC Directory
+- assets `project asset`
+- components `project component`
+- pages `project screen page`
+- tests `project unit test`
+
+## Intructions
+- Clone project
+- Install package library `yarn install or npm install`
+- Run bin shell `macos : sh run_test.sh || sh run_web.sh`
 
 ## Available Scripts
 

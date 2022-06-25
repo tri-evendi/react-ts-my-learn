@@ -16,6 +16,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.get('/available-classes', (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).json({
     items: [
       {
@@ -28,7 +29,7 @@ app.get('/available-classes', (req: Request, res: Response) => {
       }
     ]
   });
-
+  res.setHeader('Content-Type', 'application/json');
   res.status(500).json({
     code: 40168402,
     message: "mollit officia magna anim"
@@ -38,6 +39,7 @@ app.get('/available-classes', (req: Request, res: Response) => {
 app.get('/learning-class', (req: Request, res: Response) => {
   const id = Number(req.query.id);
   if (id === 1) {
+    res.setHeader('Content-Type', 'application/json');
     res.status(200).json({
       id: 1,
       name: "Belajar Javascript Dasar",
@@ -55,12 +57,14 @@ app.get('/learning-class', (req: Request, res: Response) => {
       ],
       description: "Belajar Javascript Dasar bersama Andi dan Budi"
     });
+    res.setHeader('Content-Type', 'application/json');
     res.status(404).json({
       code: 404,
       message: "Class not found"
     });
   };
   if (id === 2) {
+    res.setHeader('Content-Type', 'application/json');
     res.status(200).json({
       id: 2,
       name: "Belajar CSS Dasar",
@@ -86,9 +90,11 @@ app.get('/learning-class', (req: Request, res: Response) => {
 });
 
 app.post('/join-class', (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).json({
     message: "You are successfully registered"
   });
+  res.setHeader('Content-Type', 'application/json');
   res.status(400).json({
     code: 400,
     message: "Could not join"

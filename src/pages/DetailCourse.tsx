@@ -20,7 +20,7 @@ type Register = {
 
 const DetailCourse = (): JSX.Element => {
   const [displayModal, setDisplayModal] = useState(false);
-  const [detail, setDetail] = useState<Detail>({id: '', name: '', mentors: [], description: ''});
+  const [detail, setDetail] = useState<Detail>({ id: '', name: '', mentors: [], description: '' });
   const [message, setMessage] = useState('');
   const [disable, setDisable] = useState(true);
   const [data, setData] = useState<Register>({ fullname: '', email: '' });
@@ -88,11 +88,13 @@ const DetailCourse = (): JSX.Element => {
                   <label className="block text-900 font-medium mb-2" htmlFor='fullname'>Fullname</label>
                   <InputText className="w-full mb-3" id="fullname" name="fullname"
                     onChange={onChange}
+                    placeholder="Fullname"
                     type="text"
                     value={data.fullname} />
                   <label className="block text-900 font-medium mb-2" htmlFor='email' >Email</label>
                   <InputText className="w-full mb-3" id="email" name="email"
                     onChange={onChange}
+                    placeholder="Email"
                     type="email"
                     value={data.email} />
                   <Button className="w-full" disabled={disable} id='submit'

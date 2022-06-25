@@ -5,7 +5,7 @@ import { Menubar } from 'primereact/menubar';
 
 import logo from "../assets/img/logo.svg";
 
-const Navbar = () : JSX.Element => {
+const Navbar = (): JSX.Element => {
   const items = [
     {
       label: 'Home',
@@ -16,8 +16,8 @@ const Navbar = () : JSX.Element => {
 
   const start = () => (
     <a href='/'>
-      <img alt="logo" className="mr-2" height="40"
-        src={logo} />
+      <img alt="logo" className="mr-2"
+        height="40" src={logo} />
     </a>
   );
 
@@ -27,7 +27,7 @@ const Navbar = () : JSX.Element => {
 
   return (
     <div className='container'>
-        <Menubar end={end} model={items} start={start} />
+      <Menubar end={end} model={items} start={start} />
     </div>
   )
 }
